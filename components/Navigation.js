@@ -8,7 +8,7 @@ export default function Navigation() {
   const { menuItems } = useContext(HeaderContext);
   return (
     <ul>
-      {menuItems.map((item) => (
+      {/* {menuItems.map((item) => (
         <li key={item.id}>
           <Link href={item.slug}>
             <a className={router.pathname === item.slug ? "active" : ""}>
@@ -16,7 +16,7 @@ export default function Navigation() {
             </a>
           </Link>
         </li>
-      ))}
+      ))} */}
     </ul>
   );
 }
