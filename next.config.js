@@ -13,6 +13,11 @@ module.exports = {
     config.resolve.alias["components"] = path.join(__dirname, "components");
     config.resolve.alias["public"] = path.join(__dirname, "public");
 
-    return config;
+    // config.node = {
+    //   fs: 'empty',
+    //   net: 'empty',
+    //   tls: 'empty'
+    // }
+    return config
   },
 };

@@ -10,7 +10,7 @@ export default function Login() {
   async function handleLogin() {
     const loginInfo = {
       identifier: username,
-      password: password,
+      password,
     };
 
     const login = await fetch(`${API_URL}/auth/local`, {

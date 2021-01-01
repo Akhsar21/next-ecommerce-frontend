@@ -7,7 +7,6 @@ import { API_URL } from "../utils/urls";
 import Router from "next/router";
 import { parseCookies } from "nookies";
 import { Component } from "react";
-import { redirect } from "next/dist/next-server/server/api-utils";
 
 export default function MyApp({ Component, pageProps, navigation }) {
   // console.log(navigation);
@@ -21,6 +20,15 @@ export default function MyApp({ Component, pageProps, navigation }) {
   );
 }
 
+function redirectUser(ctx, location) {
+    if (ctx.req) {
+        ctx.res.writeHead(302, { Location: location });
+        ctx.res.end();
+    } else {
+        Router.push(location);
+    }
+}
+
 MyApp.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = {};
   const jwt = parseCookies(ctx).jwt;
@@ -31,9 +39,10 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx);
   }
+  
   if (!jwt) {
-    if (ctx.pathname === "payed-articles") {
-      redirectUser(ctx, "login");
+    if (ctx.pathname === "/payed-articles") {
+      redirectUser(ctx, "/login");
     }
   }
 

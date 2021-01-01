@@ -10,7 +10,6 @@
   "dependencies": {
     "@stripe/stripe-js": "^1.11.0",
     "autoprefixer": "^10.1.0",
-    "magic-sdk": "^4.0.2",
     "next": "10.0.4",
     "nookies": "^2.5.0",
     "postcss": "^8.2.2",
