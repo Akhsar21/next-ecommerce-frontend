@@ -1,11 +1,11 @@
-import { Footer } from "components";
+import { Footer, Seo } from "components";
 
 import styles from "./Layout.module.css";
 
 export default function Layout({ children }) {
   return (
     <>
-      {/* <Meta /> */}
+      <Seo />
       {children}
       <Footer />
     </>
