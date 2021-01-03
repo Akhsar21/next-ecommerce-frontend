@@ -1,8 +1,8 @@
 import "../styles/reset.css";
 import "../styles/globals.css";
 import Router from "next/router";
-import { parseCookies } from "nookies";
 import ContextWrapper from "../lib/constants/ContextWrapper";
+import { parseCookies } from "nookies";
 import { Header } from "components";
 import { API_URL } from "../utils/urls";
 
