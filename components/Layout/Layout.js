@@ -7,9 +7,9 @@ export default function Layout({ preview, children }) {
     <>
       <Meta />
       {/* <div className={styles.container}> */}
-        {/* <main></main> */}
-        {children}
-        <Footer />
+      {/* <main></main> */}
+      {children}
+      <Footer />
       {/* </div> */}
     </>
   );

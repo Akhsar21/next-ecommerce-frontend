@@ -21,20 +21,16 @@ export default function Meta() {
         sizes="16x16"
         href="/favicons/favicon-16x16.png"
       />
-      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="manifest" href="/configs/site.webmanifest" />
       <link
         rel="mask-icon"
         href="/favicon/safari-pinned-tab.svg"
         color="#000000"
       />
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="shortcut icon" href="/favicons/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+      <meta name="msapplication-config" content="/configs/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;700;800&family=Open+Sans:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet"
-      />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       {/* <meta
         name="description"
