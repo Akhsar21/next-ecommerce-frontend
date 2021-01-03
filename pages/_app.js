@@ -1,12 +1,10 @@
 import "../styles/reset.css";
 import "../styles/globals.css";
-import theme from "../theme/theme";
-import Header from "components/Header";
-import ContextWrapper from "components/ContextWrapper";
-import { API_URL } from "../utils/urls";
 import Router from "next/router";
 import { parseCookies } from "nookies";
-import { Component } from "react";
+import ContextWrapper from "../lib/constants/ContextWrapper";
+import { Header } from "components";
+import { API_URL } from "../utils/urls";
 
 export default function MyApp({ Component, pageProps, navigation }) {
   // console.log(navigation);
@@ -21,12 +19,12 @@ export default function MyApp({ Component, pageProps, navigation }) {
 }
 
 function redirectUser(ctx, location) {
-    if (ctx.req) {
-        ctx.res.writeHead(302, { Location: location });
-        ctx.res.end();
-    } else {
-        Router.push(location);
-    }
+  if (ctx.req) {
+    ctx.res.writeHead(302, { Location: location });
+    ctx.res.end();
+  } else {
+    Router.push(location);
+  }
 }
 
 MyApp.getInitialProps = async ({ Component, ctx }) => {
@@ -39,7 +37,7 @@ MyApp.getInitialProps = async ({ Component, ctx }) => {
   if (Component.getInitialProps) {
     pageProps = await Component.getInitialProps(ctx);
   }
-  
+
   if (!jwt) {
     if (ctx.pathname === "/payed-articles") {
       redirectUser(ctx, "/login");

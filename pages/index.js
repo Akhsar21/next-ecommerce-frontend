@@ -1,14 +1,18 @@
 import Head from "next/head";
-import { Layout } from "components";
+import { Hero, Jobs, Layout, Services } from "components";
 import { fromImageToUrl, API_URL } from "../utils/urls";
 
-export default function Home({products}) {
+export default function Home({ products }) {
   return (
     <>
-    <Head>
-      <title>Home</title>
-    </Head>
-      <Layout></Layout>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Layout>
+        <Hero />
+        <Services />
+        <Jobs />
+      </Layout>
     </>
   );
 }

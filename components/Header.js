@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Navigation from "components/Navigation";
+import { Navbar } from "components";
 
 export default function Header() {
   return (
     <>
-      <Navigation />
+      <Navbar />
     </>
   );
 }
