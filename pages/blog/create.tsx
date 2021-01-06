@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { parseCookies } from "nookies";
 import { Title } from "components";
+import API_URL from "../../utils/urls";
 
 const CreateBlog = () => {
 	const [state, setstate] = useState();
